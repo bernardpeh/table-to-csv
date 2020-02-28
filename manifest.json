@@ -1,0 +1,21 @@
+{
+	"name": "Download table as CSV",
+	"description": "Download HTML tables in MS Excel style CSV format.",
+	"version": "1.2",
+	"manifest_version": 2,
+	"permissions": ["contextMenus"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [{
+		"js": ["tabletocsv.js", "jquery-1.10.1.min.js"],
+		"matches": ["https://*/*", "http://*/*"],	
+		"all_frames": true
+	}],
+	"icons": {
+		"32": "icons/32x32.png",
+		"64": "icons/64x64.png",
+		"128": "icons/128x128.png"
+	}
+}
